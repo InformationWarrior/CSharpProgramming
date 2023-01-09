@@ -1,3 +1,5 @@
+//1.
+
 using System;
 using static System.Console;
 class Program
@@ -15,5 +17,30 @@ class Program
         }
         WriteLine("Factorial = " + factorial);
         Read();
+    }
+}
+
+//2.
+
+using System;
+using static System.Console;
+class Program
+{
+    static void Main()
+    {
+        Write("Enter number = ");
+        int num = int.Parse(ReadLine());
+        WriteLine("Factorial = {0}", Factorial(num));
+        Read();
+    }
+    static int Factorial(int num)
+    {
+        int fact = 1;
+        if (num == 0 || num == 1)
+            return fact;
+
+        for (int i = 2; i <= num; i++)
+            fact *= i;
+        return fact;
     }
 }
